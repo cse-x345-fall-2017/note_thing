@@ -1,0 +1,5 @@
+/* This file is for your main application css. */
+
+.logo {
+    background-image: url("/images/notie.png") !important;
+}

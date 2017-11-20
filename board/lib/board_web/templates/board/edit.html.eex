@@ -1,0 +1,28 @@
+
+<%= form_for(@conn, board_path(@conn, :update, @note.id), [method: "put", as: :note], fn form -> %>
+<fieldset>
+  <legend>Edit note</legend>
+  
+
+    <div class="form-group" >
+      <label for="title" >Note title</label>
+      <%= text_input(form, :title, id: :title, class: "form-control",
+        placeholder: "something short...",
+        value: @note.title)
+      %>
+    </div>
+    
+    <div class="form-group" >
+      <label for="body" >Note title</label>
+      <%=  textarea(form, :body, id: :body, class: "form-control",
+        placeholder: "make it interesting!",
+        value: @note.body)
+      %>
+    </div>
+
+    </fieldset>
+
+    <%=  submit "Submit", class: "btn btn-primary" %>
+
+    
+    <% end) %>

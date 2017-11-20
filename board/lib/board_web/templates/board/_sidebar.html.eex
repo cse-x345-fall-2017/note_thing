@@ -1,0 +1,13 @@
+<nav class="panel panel-info" >
+  <header class="panel-heading" >
+    <h3>Your notes</h3>
+  </header>
+
+  <div class="panel-body" >
+    <ul>
+      <%=  for [ id, title ] <- @titles do %>
+        <li><%= link(title, to: board_path(@conn, :show, id)) %></li>
+      <% end %>
+    </ul>          
+  </div>
+</nav>
